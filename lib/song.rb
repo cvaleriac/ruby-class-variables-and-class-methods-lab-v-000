@@ -12,12 +12,12 @@ class Song
     end
   end
 
-  def self.count 
+  def self.count
     @@count
-  end 
+  end
 
   @@genres = []
-  
+
   def self.genres
     @@genres.uniq
   end
@@ -26,7 +26,7 @@ class Song
     genre_count = {}
     @@genres.each do |genre|
       if genre_count[genre]
-        genre_count[genre] += 1 
+        genre_count[genre] += 1
       else
         genre_count[genre] = 1
       end
@@ -35,11 +35,11 @@ class Song
   end
 
   @@artists = []
-   
+
    def self.artist_count
      @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
    end
-   
+
    def self.artists
      @@artists.uniq
    end
